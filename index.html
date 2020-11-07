@@ -10,15 +10,16 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="styles/styles.css">
+
     <title>NYT Search Page</title>
 </head>
 
 <body>
 
     <!-- Jumbotron -->
-    <div class="jumbotron">
+    <div class="jumbotron jumbo-color mt-1 ml-4 mr-4">
         <div class="container">
-            <h1 class="display-4 text-center">New York Times Search</h1>
+            <h1 class="display-4 text-center"><i class="far fa-newspaper"></i> New York Times Search</h1>
             <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
                 to featured content or information.</p>
             <hr class="my-4">
@@ -26,9 +27,9 @@
             <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
         </div>
     </div>
-    
+
     <!-- Search Parameters Card Body -->
-    <div class="container">
+    <div class="container mw-100">
 
 
         <div class="card border-dark mb-3">
@@ -36,30 +37,35 @@
             <div class="card-body text-dark">
 
                 <!-- Form Body -->
-                <form>
+                <form id="search-parameters">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
+                        <label for="search-term">Search Term:</label>
+                        <input class="form-control" type="text" id="search-term">
+
+                        <label for="number-of-records">Number of Records to Retrieve:</label>
+                        <select class="custom-select mr-sm-2" id="number-of-records">
+                            <option selected>Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+
+                        <label for="start-year">Start Year (Optional):</label>
+                        <input class="form-control" type="text" id="start-year">
+
+                        <label for="end-year">End of Year (Optional): </label>
+                        <input class="form-control" type="text" id="end-year">
+
+                        <button type="submit" class="btn btn-primary" id="submit-results">Submit</button>
+                        <button class="btn btn-primary" type="reset" id="clear-results">Clear Results</button>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 
     <!-- Top Articles Card -->
-    <div class="container">
+    <div class="container mw-100">
 
 
         <div class="card border-dark mb-3">
@@ -84,6 +90,7 @@
 
 
     <script src="scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/f4e83d7a67.js" crossorigin="anonymous"></script>
 
 </body>
 
